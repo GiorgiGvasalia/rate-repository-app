@@ -1,5 +1,4 @@
 import { View, StyleSheet, Text, Pressable, Alert } from 'react-native';
-// import Constants from 'expo-constants';
 import theme from '../theme';
 
 const styles = StyleSheet.create({
