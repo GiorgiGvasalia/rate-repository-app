@@ -11,7 +11,10 @@ const theme = {
     },
     paddings: {
         barPadding: 30,
-    }
+        upperDescriptionPadding: 10
+    },
+
+    
 }
 
 export default theme
