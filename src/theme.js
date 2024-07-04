@@ -23,6 +23,10 @@ const theme = {
     color: "#fff",
     textAlign: "center",
   },
+  formErrors: {
+    color: 'red',
+    borderColor: 'red'
+  }
 };
 
 export default theme;
