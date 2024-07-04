@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#e1e4e8",
     width: "100%",
   },
+  
 });
 
 const Main = () => {
@@ -24,7 +25,8 @@ const Main = () => {
       <AppBar />
       <Routes>
         <Route path="/" element={<RepositoryList />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
+
+        <Route style={styles.signInView} path="/signin" element={<SignIn />}></Route>
       </Routes>
       {signedIn && <RepositoryList />}
     </View>

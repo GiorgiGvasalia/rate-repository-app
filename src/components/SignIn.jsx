@@ -1,13 +1,30 @@
-import React from "react";
-import { Pressable, Text } from "react-native";
-import { View } from "react-native";
+import { Pressable, Text, TextInput, View, StyleSheet } from "react-native";
 import { useFormik } from "formik";
-import { TextInput } from "react-native";
-import { StyleSheet } from "react-native";
 import theme from "../theme";
 
 const styles = StyleSheet.create({
-  border: theme.borders.border,
+  signInView: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#fff",
+    paddingTop: 40,
+  },
+  signInBtn: {
+    padding: theme.signInBtn.padding,
+    backgroundColor: theme.signInBtn.bgColor,
+    color: theme.signInBtn.color,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "90%",
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: "blue",
+    padding: 8,
+    marginBottom: 12,
+    borderRadius: 4,
+    width: "90%",
+  },
 });
 
 const initialValues = {
@@ -20,21 +37,24 @@ const SignIn = ({ onSubmit }) => {
     initialValues,
     onSubmit,
   });
+
   return (
-    <View>
+    <View style={styles.signInView}>
       <TextInput
-        style={styles.border}
+        style={styles.input}
         placeholder="user name"
         value={formik.values.username}
         onChangeText={formik.handleChange("username")}
-      ></TextInput>
+      />
       <TextInput
+        style={styles.input}
         placeholder="password"
         value={formik.values.password}
         onChangeText={formik.handleChange("password")}
-      ></TextInput>
-      <Pressable onPress={formik.handleSubmit}>
-        <Text>Sign in</Text>
+        secureTextEntry
+      />
+      <Pressable style={styles.signInBtn} onPress={formik.handleSubmit}>
+        <Text style={{ color: theme.signInBtn.color }}>Sign in</Text>
       </Pressable>
     </View>
   );

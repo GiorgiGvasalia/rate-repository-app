@@ -8,11 +8,13 @@ const styles = StyleSheet.create({
     backgroundColor: theme.bgColors.appBarBg,
     padding: theme.paddings.barPadding,
     paddingBottom: theme.paddings.paddingBtm,
+    
   },
   text: {
     color: theme.colors.appBarTxtColor,
     fontWeight: theme.fontWeights.bold,
   },
+
 });
 
 const AppBar = () => {
@@ -20,11 +22,11 @@ const AppBar = () => {
     <View style={styles.container}>
       {/* ... */}
       <ScrollView horizontal>
-        <Pressable onPress={() => Alert.alert("pressed")}>
+        <Pressable   onPress={() => Alert.alert("pressed")}>
           <Text style={styles.text}>Repositories</Text>
         </Pressable>
 
-        <Link to="/signin">
+        <Link style={{marginLeft: 10}}  to="/signin">
           <Text style={styles.text}>Sign in</Text>
         </Link>
       </ScrollView>

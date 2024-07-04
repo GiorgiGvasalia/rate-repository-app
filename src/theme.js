@@ -13,9 +13,15 @@ const theme = {
     barPadding: 30,
     upperDescriptionPadding: 10,
   },
-
   borders: {
-    border: "1px solid blue",
+    borderWidth: 1,
+    borderColor: "blue",
+  },
+  signInBtn: {
+    bgColor: "blue",
+    padding: 10,
+    color: "#fff",
+    textAlign: "center",
   },
 };
 
