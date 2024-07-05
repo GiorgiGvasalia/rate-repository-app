@@ -1,5 +1,5 @@
 import Constants from "expo-constants";
-import { StyleSheet, View } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
 import RepositoryList from "./RepositoryList";
 import AppBar from "./AppBar";
 import { Route, Routes } from "react-router-native";
@@ -13,7 +13,9 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     backgroundColor: "#e1e4e8",
     width: "100%",
+    color: Platform.OS === 'android' ? 'green' : 'blue'
   },
+
 });
 
 const Main = () => {

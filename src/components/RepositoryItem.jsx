@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     padding: 25,
+    gap: 15
   },
   image: {
     width: 50,
@@ -12,13 +13,14 @@ const styles = StyleSheet.create({
   },
   flexItems: {
     flexDirection: "row",
-    
+    gap: 10
   },
   userName: {
     fontWeight: theme.fontWeights.bold,
   },
   paddings: {
     paddingLeft: theme.paddings.upperDescriptionPadding,
+    gap: 5
   },
   languages: {
     backgroundColor: '#0366d6',
