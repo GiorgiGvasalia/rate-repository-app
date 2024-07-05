@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     color: theme.signInBtn.color,
     alignItems: "center",
     justifyContent: "center",
-    width: "90%",
+    width: "100%",
   },
   input: {
     borderWidth: 1,
@@ -31,12 +31,22 @@ const styles = StyleSheet.create({
     padding: 8,
     marginBottom: 8,
     borderRadius: 4,
-    width: "90%",
+    width: "100%",
   },
   formErrors: {
     borderColor: theme.formErrors.borderColor,
     color: theme.formErrors.color,
+    alignSelf: 'flex-start',
+    textAlign: 'left'
   },
+  errorStyling: {
+    borderWidth: 1,
+    borderColor: "#d73a4a",
+    padding: 8,
+    marginBottom: 8,
+    borderRadius: 4,
+    width: "100%",
+  }
 });
 
 const initialValues = {
@@ -69,7 +79,7 @@ const SignIn = ({ onSubmit }) => {
     <View style={styles.signInView}>
       <View style={styles.container}>
         <TextInput
-          style={styles.input}
+          style={!formik.errors.username ? styles.input : styles.errorStyling}
           placeholder="user name"
           value={formik.values.username}
           onChangeText={formik.handleChange("username")}
@@ -79,7 +89,7 @@ const SignIn = ({ onSubmit }) => {
         )}
 
         <TextInput
-          style={styles.input}
+          style={!formik.errors.password ? styles.input : styles.errorStyling}
           placeholder="password"
           value={formik.values.password}
           onChangeText={formik.handleChange("password")}

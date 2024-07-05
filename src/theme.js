@@ -24,8 +24,8 @@ const theme = {
     textAlign: "center",
   },
   formErrors: {
-    color: 'red',
-    borderColor: 'red'
+    color: '#d73a4a',
+    borderColor: '#d73a4a'
   }
 };
 

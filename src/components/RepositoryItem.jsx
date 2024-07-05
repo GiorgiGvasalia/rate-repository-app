@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   },
   flexItems: {
     flexDirection: "row",
+    
   },
   userName: {
     fontWeight: theme.fontWeights.bold,
@@ -19,6 +20,13 @@ const styles = StyleSheet.create({
   paddings: {
     paddingLeft: theme.paddings.upperDescriptionPadding,
   },
+  languages: {
+    backgroundColor: '#0366d6',
+    color: '#fff',
+    alignSelf: 'flex-start',
+    padding: 4,
+    borderRadius: 5
+  }
 });
 
 const RepositoryItem = ({ repository }) => {
@@ -41,7 +49,7 @@ const RepositoryItem = ({ repository }) => {
         <View style={styles.paddings}>
           <Text style={styles.userName}>{repository.fullName}</Text>
           <Text>{repository.description}</Text>
-          <Text>{repository.language}</Text>
+          <Text style={styles.languages}>{repository.language}</Text>
         </View>
       </View>
       <View style={styles.flexItems}>
