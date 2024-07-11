@@ -13,7 +13,9 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     backgroundColor: "#e1e4e8",
     width: "100%",
-    color: Platform.OS === 'android' ? 'green' : 'blue'
+   
+ 
+    
   },
 
 });

@@ -1,11 +1,10 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, Platform } from "react-native";
 import theme from "../theme";
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     padding: 25,
-    gap: 15
   },
   image: {
     width: 50,
@@ -28,7 +27,17 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     padding: 4,
     borderRadius: 5
-  }
+  },
+
+  // platform specific styling ( not needed right now )
+  text: {
+    color: Platform.select({
+      android: 'green',
+      ios: 'blue',
+      default: 'black',
+    }),
+  },
+  
 });
 
 const RepositoryItem = ({ repository }) => {
